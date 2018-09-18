@@ -21,10 +21,8 @@ in the low-confidence region, the final label is the argmin of the Markov
 Random Field energies, which corresponds to the argmax of the updated label
 probabilities. In the high-confidence region, the output labels are obtained
 using majority vote.
-
--------------------------------------------------------------------------    
+  
                          PUB-MRF Parameters
--------------------------------------------------------------------------
 
 Threshold     : Let N be the number of labels which receive at least
                      one at voxel v. Then v is in the low-confidence
