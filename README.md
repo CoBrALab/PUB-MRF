@@ -7,23 +7,20 @@ particular, the algorithm has been tested extensively with MAGeT-Brain.
 PUB-MRF starts by subdividing the stereotaxic space into a high-confidence
 and a low-confidence region. A voxel is included in the low-confidence
 region if and only if for any label, the percentage of votes at that voxel
-does not exceed a given threshold. 
-
-Then, PUB-MRF iterates through the voxels in the low-confidence region. 
-At each voxel, a local Markov Random Field is defined. We consider that
-the set of all labels which receive at least one vote on a given voxel is 
-a partition of the sample space.
+does not exceed a given threshold. Then, PUB-MRF iterates through the voxels
+in the low-confidence region. At each voxel, a local Markov Random Field is
+defined. We consider that the set of all labels which receive at least one 
+vote on a given voxel is a partition of the sample space.
 
 The doubleton potentials are estimated using the segmentation votes at the
 voxel itself, and in an immediate 26-voxel neighborhood. The singleton
 potential for each label is estimated using the local intensity values in
 the brain scan, under the assumption that with a large number of voxels, 
-this will approximately correspond to a normal distribution.
-
-For any voxel in the low-confidence region, the final label is the argmin 
-of the Markov Random Field energies, which corresponds to the argmax of
-the updated label probabilities. In the high-confidence region, the output 
-labels are obtained using majority vote.
+this will approximately correspond to a normal distribution. For any voxel
+in the low-confidence region, the final label is the argmin of the Markov 
+Random Field energies, which corresponds to the argmax of the updated label
+probabilities. In the high-confidence region, the output labels are obtained
+using majority vote.
 
 -------------------------------------------------------------------------    
                          PUB-MRF Parameters
