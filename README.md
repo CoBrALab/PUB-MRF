@@ -3,6 +3,8 @@
 The PUB-MRF algorithm uses a Markov Random Field model to update the
 label probabilities obtained with a multi-atlas registration method. In
 particular, the algorithm has been tested extensively with MAGeT-Brain.
+  
+                         PUB-MRF Algorithm
 
 PUB-MRF starts by subdividing the stereotaxic space into a high-confidence
 and a low-confidence region. A voxel is included in the low-confidence
@@ -24,25 +26,29 @@ using majority vote.
   
                          PUB-MRF Parameters
 
-Threshold     : Let N be the number of labels which receive at least
+<b>Threshold</b>
+Let N be the number of labels which receive at least
                      one at voxel v. Then v is in the low-confidence
                      region if and only if, for any label l,
                      P(L(v) = l) < (1.0/N + self.threshold)
 
-Patch Length  : At each low-confidence voxel v, the region used to
+<b>Patch Length</b>
+At each low-confidence voxel v, the region used to
                      compute the singleton potential is a cube with edge
                      length (2*self.patch_length + 1) centered at v.
 
-Alpha         : Corresponds to the relative weight of the doubleton
+<b>Alpha</b>         
+Corresponds to the relative weight of the doubleton
                      potential with respect to the singleton potential in
                      the MRF energy computation.
 
-Beta          : The weights in the 26-voxel neighborhood for the
+<b>Beta<b>          
+The weights in the 26-voxel neighborhood for the
                      doubleton potential are evaluated with an expotential
                      decay function with parameter self.beta, with respect
                      to the Euclidian norm.
 
-Key features of PUB-MRF:
+<h5>Key features of PUB-MRF<h5>
 - Works with any number of separate or adjacent labels
 - Assumes strictly positive integer values for the structural labels
 - Assumes that the background label is 0
