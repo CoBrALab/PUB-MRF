@@ -1,4 +1,4 @@
-#PUB-MRF: a novel probabilistic method for label fusion in brain segmentation pipelines
+# PUB-MRF: a novel probabilistic method for label fusion in brain segmentation pipelines
 
 The PUB-MRF algorithm uses a Markov Random Field model to update the
 label probabilities obtained with a multi-atlas registration method. In
