@@ -26,35 +26,33 @@ using majority vote.
 
 <h3>PUB-MRF Parameters</h3>
 
-<b>Threshold</b>
-
+<b>Threshold</b> <br>
 Let N be the number of labels which receive at least
-                     one at voxel v. Then v is in the low-confidence
-                     region if and only if, for any label l,
-                     P(L(v) = l) < (1.0/N + self.threshold)
+one at voxel v. Then v is in the low-confidence
+region if and only if, for any label l,
+P(L(v) = l) < (1.0/N + self.threshold)
 
-<b>Patch Length</b>
-
+<b>Patch Length</b> <br>
 At each low-confidence voxel v, the region used to
-                     compute the singleton potential is a cube with edge
-                     length (2*self.patch_length + 1) centered at v.
+compute the singleton potential is a cube with edge
+length (2*self.patch_length + 1) centered at v.
 
-<b>Alpha</b>         
+<b>Alpha</b> <br>
 Corresponds to the relative weight of the doubleton
-                     potential with respect to the singleton potential in
-                     the MRF energy computation.
+potential with respect to the singleton potential in
+the MRF energy computation.
 
-<b>Beta</b>          
+<b>Beta</b> <br>
 The weights in the 26-voxel neighborhood for the
-                     doubleton potential are evaluated with an expotential
-                     decay function with parameter self.beta, with respect
-                     to the Euclidian norm.
+doubleton potential are evaluated with an expotential
+decay function with parameter self.beta, with respect
+to the Euclidian norm.
 
 <h3>Key features of PUB-MRF</h3>
-- Works with any number of separate or adjacent labels
-- Assumes strictly positive integer values for the structural labels
-- Assumes that the background label is 0
-- Uses smart bounding boxes to reduce peak memory usage
+- Works with any number of separate or adjacent labels <br>
+- Assumes strictly positive integer values for the structural labels <br>
+- Assumes that the background label is 0 <br>
+- Uses smart bounding boxes to reduce peak memory usage <br>
 
 (C) Charles Lagace, Nikhil Bhagwat, Chakravarty Lab
 http://www.douglas.qc.ca/researcher/mallar-chakravarty?locale=en
