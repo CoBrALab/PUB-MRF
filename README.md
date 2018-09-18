@@ -48,7 +48,7 @@ The weights in the 26-voxel neighborhood for the
                      decay function with parameter self.beta, with respect
                      to the Euclidian norm.
 
-<h5>Key features of PUB-MRF<h5>
+<h3>Key features of PUB-MRF<h3>
 - Works with any number of separate or adjacent labels
 - Assumes strictly positive integer values for the structural labels
 - Assumes that the background label is 0
