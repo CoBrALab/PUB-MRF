@@ -3,8 +3,8 @@
 The PUB-MRF algorithm uses a Markov Random Field model to update the
 label probabilities obtained with a multi-atlas registration method. In
 particular, the algorithm has been tested extensively with MAGeT-Brain.
-  
-                         PUB-MRF Algorithm
+
+<h3>PUB-MRF Algorithm</h3>
 
 PUB-MRF starts by subdividing the stereotaxic space into a high-confidence
 and a low-confidence region. A voxel is included in the low-confidence
@@ -23,8 +23,8 @@ in the low-confidence region, the final label is the argmin of the Markov
 Random Field energies, which corresponds to the argmax of the updated label
 probabilities. In the high-confidence region, the output labels are obtained
 using majority vote.
-  
-                         PUB-MRF Parameters
+
+<h3>PUB-MRF Parameters</h3>
 
 <b>Threshold</b>
 Let N be the number of labels which receive at least
@@ -42,7 +42,7 @@ Corresponds to the relative weight of the doubleton
                      potential with respect to the singleton potential in
                      the MRF energy computation.
 
-<b>Beta<b>          
+<b>Beta</b>          
 The weights in the 26-voxel neighborhood for the
                      doubleton potential are evaluated with an expotential
                      decay function with parameter self.beta, with respect
