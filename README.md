@@ -26,25 +26,25 @@ using majority vote.
                          PUB-MRF Parameters
 -------------------------------------------------------------------------
 
-self.threshold     : Let N be the number of labels which receive at least
+Threshold     : Let N be the number of labels which receive at least
                      one at voxel v. Then v is in the low-confidence
                      region if and only if, for any label l,
                      P(L(v) = l) < (1.0/N + self.threshold)
 
-self.patch_length  : At each low-confidence voxel v, the region used to
+Patch Length  : At each low-confidence voxel v, the region used to
                      compute the singleton potential is a cube with edge
                      length (2*self.patch_length + 1) centered at v.
 
-self.alpha         : Corresponds to the relative weight of the doubleton
+Alpha         : Corresponds to the relative weight of the doubleton
                      potential with respect to the singleton potential in
                      the MRF energy computation.
 
-self.beta          : The weights in the 26-voxel neighborhood for the
+Beta          : The weights in the 26-voxel neighborhood for the
                      doubleton potential are evaluated with an expotential
                      decay function with parameter self.beta, with respect
                      to the Euclidian norm.
 
-Key features of this version:
+Key features of PUB-MRF:
 - Works with any number of separate or adjacent labels
 - Assumes strictly positive integer values for the structural labels
 - Assumes that the background label is 0
