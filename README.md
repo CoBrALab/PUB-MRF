@@ -52,7 +52,7 @@ to the Euclidian norm.
 - Works with any number of separate or adjacent labels <br>
 - Assumes strictly positive integer values for the structural labels <br>
 - Assumes that the background label is 0 <br>
-- Uses smart bounding boxes to reduce peak memory usage <br>
+- Uses smart bounding boxes to reduce peak memory usage <br> <br>
 
-(C) Charles Lagace, Nikhil Bhagwat, Chakravarty Lab
+(C) Charles Lagace, Nikhil Bhagwat, Chakravarty Lab <br>
 http://www.douglas.qc.ca/researcher/mallar-chakravarty?locale=en
